@@ -83,7 +83,7 @@
                                 <h2>${person.navn} </h2>
                                 <p>
                                     Github: <a href="http://www.github.com/${person.github}">${person.github}</a></p>
-                                <div class="billede"><img src =             "${person.billede}"></div>
+                                <img src ="${person.billede}">
                                 <p>Email: ${person.email}</p>
                                 <p>Alder: ${person.alder}</p>
                                 <p>Køn: ${person.køn}</p>
@@ -92,7 +92,7 @@
                         `;
                         dest.insertAdjacentHTML("beforeend", template);
                         dest.lastElementChild.addEventListener("click", () => {
-                            location.href = "06-single.html?github=" + person.github;
+                            location.href = "07-singleview.html?github=" + person.github;
                         });
                     }
                 })
@@ -111,6 +111,7 @@
                 this.classList.add("valgt");
                 visPersoner();
             }
+
             getJson();
         }
     </script>
